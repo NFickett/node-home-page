@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <link rel="icon" href="data:,">
+        <link rel="stylesheet" href="styles/regex.css">
+        <script src="libs/regex.js"></script>
+        <title>Regexpresion Tester</title>  
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h1>Regexpresion Tester</h1>
+        <!--This is the basic division for where the inputs stay, The text box for "pass" is disabled
+            as it is not to be used by the user-->
+        <div class="content">
+          <label>Did this regex pass? <input type="text" id="pass" 
+            placeholder="Did It Pass?" disabled></label><br>
+            
+          <input type="text" id="taRegTest" placeholder="Regex to be Tested">
+
+         <input type="text" id="taToTest" placeholder="Test string"><br>
+
+         <input type="button" onclick= "regTest()" value="Test">
+        </div>
+    </body>
+</html>

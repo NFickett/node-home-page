@@ -1,0 +1,29 @@
+*{
+    font-family:sans-serif;
+}
+.header{
+    text-align:center;
+    background-color: lightsteelblue;
+    margin-bottom: -22px;
+}
+
+ul{
+    list-style-type: none;
+    border: 1px solid;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    background-color:rgb(216, 216, 216);
+}
+
+li a{
+    border: 1px solid;
+    display: block;
+    color:black;
+    text-decoration: none;
+    text-align: center;
+    line-height:200%;
+
+}

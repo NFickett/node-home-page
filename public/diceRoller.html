@@ -1,0 +1,94 @@
+<!--
+Author: Nathan Fickett
+Class: Web and Distributed Programming
+Project: Lab 3/ Dice roller
+Description: This is a rough verision of a dice rolling game
+the game is won by rolling higher than the enemy, then
+victory must be claimed throught the "Claim Victory"
+button that will appear when victory is available
+if you cannot beat the enemy in 3 turns, you will lose
+a turn counter and score counter are shown for the players
+referrance.
+-->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <title>Dice Roller</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles/diceRoller.css">
+  <script src="libs/diceRoller.js"></script>
+  <link rel="icon" href="data:,">
+</head>
+<!--enemyRoll must be called before rollDice because rollDice holds
+the logic to check if the Claim Vitory button appears
+-->
+<body onload="enemyRoll(); rollDice()">
+    <h1>Dice Roller</h1>
+    <p>This Simple dice rolling game will pit you against a bad guy, and see if you can out roll
+        him in 3 turns. <strong>*YOU MUST CLAIM VICTORY TO WIN*</strong> 
+     <label>Turn Count:<input id = "turnCount" type = "text" value="" size = "5" disabled></label>
+    </p>
+    
+<div class = playerBox>
+    <div class="dieBox">
+        <label>Die 1:<input id="taPlayerDie1" type="text" value="" size="5" disabled></label><br>
+    </div>
+
+    <div class="dieBox">
+        <label>Die 2:<input id="taPlayerDie2" type="text" value="" size="5" disabled></label><br>
+    </div>
+
+    <div class="dieBox">
+        <label>Die 3:<input id="taPlayerDie3" type="text" value="" size="5" disabled></label><br>
+    </div> 
+
+    <div class="dieBox">
+        <label>Die 4:<input id="taPlayerDie4" type="text" value="" size="5" disabled></label><br>
+    </div>
+
+    <div class="dieBox">
+        <label>Die 5:<input id="taPlayerDie5" type="text" value="" size="5" disabled></label><br>
+    </div>   
+
+    <div class = "dieBox">
+        <label>Player Total:<input id = "playerTotal" type = "text" value="" size = "5" disabled></label>
+    </div>   
+
+    <label>Player Score:<input id = "playerScore" type = "text" value = 0 size = "5" disabled></label><br>
+
+    <button type="button" onclick="rollDice()" autofocus id = "roll">Roll Dice</button>
+</div>
+
+<div class = playerBox>
+    <div class="dieBox">
+        <label>Die 1:<input id="taEnemyDie1" type="text" value="" size="5" disabled></label><br>
+    </div>
+
+    <div class="dieBox">
+        <label>Die 2:<input id="taEnemyDie2" type="text" value="" size="5" disabled></label><br> 
+    </div>
+
+    <div class="dieBox">
+        <label>Die 3:<input id="taEnemyDie3" type="text" value="" size="5" disabled></label><br>
+    </div> 
+
+    <div class="dieBox">
+        <label>Die 4:<input id="taEnemyDie4" type="text" value="" size="5" disabled></label><br>
+    </div>
+
+    <div class="dieBox">
+        <label>Die 5:<input id="taEnemyDie5" type="text" value="" size="5" disabled></label><br>
+    </div>      
+    
+    <div class = "dieBox">
+        <label>Enemy Total:<input id = "enemyTotal" type = "text" value="" size = "5" disabled></label>
+    </div>   
+
+    <label>Enemy Score:<input id = "enemyScore" type = "text" value = 0 size = "5" disabled></label>
+
+    <button type="button" onclick="claimVictory()" style="display: none;" id="victory">Claim Victory</button>
+</div>
+</body>
+
+</html>
