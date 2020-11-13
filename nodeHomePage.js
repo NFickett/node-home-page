@@ -8,6 +8,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/index.html'));
 })
 
+
 // custom 404 page
 app.use((req, res) => {
   res.type('text/plain')
